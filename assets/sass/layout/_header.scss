@@ -1,0 +1,400 @@
+
+header{
+	height: 100%;
+	position: relative;
+	z-index: 0;
+	text-align: center;
+	
+	& .container-fluid{
+		height: 50rem;
+	}
+	
+		& ul {
+			
+			&.nav-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+	}
+	& .background-image{
+		height: 100%;
+      	width: 100%;
+      	background-color: $color-primary-white;
+      	background-image: linear-gradient(to right bottom, rgba($color-blue-deep, .2),
+		rgba($color-blue-deep, 0)),
+		url(/images/warehouseImage.jpg);
+      	background-position: center center;
+      	background-size: cover;
+      	position: fixed;
+      	top: 0;
+      	right: 0;
+
+      	z-index: -1;
+      	filter: brightness(0.5);
+		
+	}
+	
+	& #header-text{
+		position: fixed;
+		height: 85%;
+		width: 100%;
+		
+		padding-top: 0;
+		left: 0;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.4s;
+		
+		& #greetings {
+			background-color: rgba($color-primary-black, .6);
+			border-radius: .6rem;
+			position: relative;
+			font-family:'Merriweather', serif;
+			padding-top: 3rem;
+			padding-bottom: 2rem;
+			padding-left: 10rem;
+			padding-right: 10rem;
+			box-sizing: border-box;
+			border: .1rem solid $color-primary-white;
+			transition: .4s;
+			animation: backAnimateHome 1s ease-out;
+			animation-fill-mode: backwards;
+			
+			backface-visibility: hidden;
+			& h3{
+				display: block;
+				font-size: 6rem;
+				color: rgba($color-primary-white, .9);
+				text-shadow: .1rem .1rem .4rem $color-primary-white;
+				animation: headerAnimateHome 1s ease-out;
+				animation-delay: 1s;
+				animation-fill-mode:backwards;
+			}
+			& p {
+				font-size: 2rem;
+				padding-bottom: 1rem;
+				font-style: italic;
+				animation: paraAnimateHome 1s ease-out;
+				animation-delay: 1.3s;
+				animation-fill-mode: backwards;
+		
+			}
+		}
+	}
+	& .btn:link,
+	.btn:visited {
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 1.5rem 4rem;
+		display: inline-block;
+		border-radius: 10rem;
+		transition: all .2s;
+		position: relative;
+	}
+	
+	& .btn:hover {
+		transform: translateY(-.2rem);
+		box-shadow: 0 1rem 2rem rgba($color-primary-white, .2);
+	}
+	
+	& .btn:active {
+		transform: translateY(-.1rem);
+		box-shadow: 0 .5rem 1rem rgba($color-primary-white, .2);
+	}
+	
+	& .btn-white {
+		background-color: $color-primary-white;
+		color: $color-primary-dark-grey;
+	}
+	
+	& .btn::after {
+		content: "";
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		border-radius: 10rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		transition: all .4s;
+	}
+	
+	& .btn-white::after {
+		background-color: $color-primary-white;
+		
+	}
+	
+	& .btn:hover::after {
+		transform: scaleX(1.5) scaleY(1.4);
+		opacity: 0;
+	}
+	
+	& .btn-animated{
+		animation: buttonAnimateHome .5s ease-out .75s;
+		animation-fill-mode: backwards;
+	}
+
+}
+.ul-container{
+	text-align: center;
+	width: 100%;
+	height: 6rem;
+	top: 0;
+	left: 0;
+	position: fixed;
+	padding-right: 2rem;
+	padding-top: 1.2rem;
+	background-color: rgba($color-primary-dark-grey, 1);
+	background-image: linear-gradient(to right bottom, 		rgba($color-primary-white, .7),
+		rgba($color-primary-white, 1)),
+		url(/images/header-background.jpg);
+	background-position: center center;
+	border-bottom-style: solid;
+	border-bottom-color: rgba($color-primary-white, .6);
+	border-bottom-width: 1px;
+	transition: .5s;
+	z-index: 100000;
+
+	& li {
+		display: inline-block;
+		padding: .8rem 3rem;
+		
+
+		& a {
+			transition: color 0.25s;
+			position: relative;
+			color: $color-primary-black;
+			text-align: center;
+			width: 150%;
+			height: 50%;
+			text-decoration: none;
+			font-size: 1.4rem;
+			font-family: 'Courier New', sans-serif;
+			text-transform: uppercase;
+			display: inline-block;
+
+			&:hover{
+				color: $color-primary-normal-grey;
+			}
+
+			//before
+			&:before{
+				content: '';
+				position: absolute;
+
+				top: 0rem;
+				left: 0rem;
+				width: 0;
+				height: 0;
+				background: transparent;
+				border: .2rem solid transparent;
+			}
+			&:hover::before{
+				animation: animate .4s linear forwards;
+
+			}
+
+			// after
+			&:after {
+				content: '';
+				position: absolute;
+
+				top: 0rem;
+				left: 0rem;
+				width: 0;
+				height: 0;
+				background: transparent;
+				border: .2rem solid transparent;
+
+			}
+			&:hover::after{
+				animation: animate2, font-size .4s linear forwards;
+				animation-delay: .4s;
+			}
+			}
+		}
+}
+.one{
+	animation: animateNav .7s ease-out;
+	animation-delay: .3s;
+	animation-fill-mode: backwards;
+}
+.two{
+	animation: animateNav .7s ease-out;
+	animation-delay: .5s;
+	animation-fill-mode: backwards;
+}
+.three{
+	animation: animateNav .7s ease-out;
+	animation-delay: .7s;
+	animation-fill-mode: backwards;
+}
+.four{
+	animation: animateNav .7s ease-out;
+	animation-delay: .9s;
+	animation-fill-mode: backwards;
+}
+.five{
+	 animation: animateNav .7s ease-out;
+	 animation-delay: 1.1s;
+	animation-fill-mode: backwards;
+}
+
+
+
+//keyframes
+@keyframes animate {
+	0%{
+		width: 0;
+		height: 0;
+		border-top-color: $color-blue-light;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+	50%{
+		width: 100%;
+		height: 0;
+		border-top-color: $color-blue-light;
+		border-right-color: $color-blue-light;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+	100%{
+		width: 100%;
+		height: 100%;
+		border-top-color: $color-blue-light;
+		border-right-color: $color-blue-light;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+	
+}
+@keyframes animate2 {
+	0%{
+		width: 0;
+		height: 0;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: $color-blue-light;
+	}
+	50%{
+		width: 0;
+		height: 100%;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: $color-blue-light;
+		border-left-color: $color-blue-light;
+	}
+	100%{
+		width: 100%;
+		height: 100%;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: $color-blue-light;
+		border-left-color: $color-blue-light;
+	}
+	
+}
+
+
+//button keyframes
+@keyframes headerAnimateHome {
+	0%{
+		opacity: 0;
+		transform: translateX(10rem);
+		
+	}
+	90%{
+		transform: tranlateX(-1rem);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+		
+	}
+	
+}
+@keyframes paraAnimateHome {
+	0%{
+		opacity: 0;
+		transform: translateX(-10rem);
+		
+	}
+	80%{
+		transform: tranlateX(1rem);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes buttonAnimateHome {
+	0%{
+		opacity: 0;
+		transform: translateY(3rem);
+		
+	}
+	80%{
+		transform: translateY(-.2rem);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+		
+	}
+	
+}
+@keyframes backAnimateHome {
+	0%{
+		height: 0;
+	}
+	80%{
+		height: 47%;	
+	}
+	100%{
+		height: 46%;
+	}
+	
+}
+
+@keyframes animateNav {
+	0%{
+		opacity: 0;
+		font-size:1rem;
+	}
+	80%
+	{
+		font-size: 1.4rem;
+	}
+	100%{
+		opacity: 1;
+		font-size: 1.4rem;
+	}
+	
+}
+// on scroll functions
+
+.ul-scrolled{
+	background-color: rgba($color-primary-black, .9);
+	padding-top: 0;
+	height: auto;
+	border-radius: .3rem;
+	box-shadow: .2rem .2rem .4rem;
+	transition: 0.5s;
+}
+
+.greetings-text{
+	background-color: rgba($color-primary-black, 0) !important;
+	transition: 0.4s;
+}
+
+
+

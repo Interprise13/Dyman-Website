@@ -1,0 +1,16 @@
+{
+  "name": "dyman",
+  "version": "1.0.0",
+  "description": "landing page for dyman",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass assets/sass/main.scss assets/css/style.css -w"
+  },
+  "author": "Ryan",
+  "license": "ISC",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
+    "node-sass": "^4.9.3"
+  },
+  "dependencies": {}
+}

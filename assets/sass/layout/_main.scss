@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 1.7;
+	color: #777;
+	height: 100%;
+	min-height: 100%;
+	
+}
+.container-fluid{
+	padding: 0;
+	
+	& .shape-container{
+		position: relative;
+      	z-index: 1;
+      	background-color: rgb(255, 255, 255);
+      
+      	top: -20px;
+		& .left-skew{
+			width: 100%;
+			height: 35rem;
+			background-color: $color-primary-white;
+			position:absolute;
+			top: 0;
+			right: 0;
+			
+			transform: skewY(5deg);
+		}
+		& .right-skew{
+			width: 100%;
+			height: 35rem;
+			background-color: $color-primary-white;
+			position:absolute;
+			top: 0;
+			right: 0;
+			
+			transform: skewY(-5deg);
+		}
+	}
+}
+#calc-container{
+	top: 0rem;
+	z-index: 8;
+	& .left-skew,
+	.right-skew {
+		background-color: $color-blue-light;
+	}
+	
+}
+#calc-container-2 {
+	top: 10rem;
+	z-index: 9;
+}
+
+
+.main-content{
+	position: relative;
+	z-index: 2;
+	
+	background-color: $color-primary-white;
+	background-image: linear-gradient(to bottom, 
+				rgba($color-primary-white, 1),
+				rgba($color-primary-white, .7)),
+				url(/images/header-background.jpg);
+	background-position: center;
+	background-size:contain;
+	padding: 0 4rem 10rem 4rem;
+}
+
+.padding-top{
+	padding-top: 5rem;
+}
+.padding-bottom{
+	padding-bottom: 10rem;
+}
+
+
+// on scroll
+
+.img-sectors {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.foam-pic {
+	border-radius: .5rem;
+	
+	
+}
+.foam-frame{
+	& .foam1 {
+	top: -6rem;
+	left: 0rem;
+	position: absolute;
+	width: 20rem;
+	height: 25rem;
+	box-shadow: .2rem .2rem .6rem .1rem rgba($color-primary-white, .2);
+	transition: width, height .5s;
+	&:hover{
+		z-index: 5;
+		width: 20rem;
+		height: 25rem;
+		
+	}
+}
+& .foam2 {
+	top: 7rem;
+	left: 5rem;
+	position: absolute;
+	width: 30rem;
+	height: 20rem;
+	box-shadow: .2rem .2rem .6rem .1rem rgba($color-primary-black, .4);
+	&:hover{
+		z-index: 5;
+	}
+}
+& .foam3 {
+	position: absolute;
+	top: -7rem;
+	right: 3rem;
+	width: 20rem;
+	height: 20rem;
+	box-shadow: .2rem .2rem .6rem .1rem rgba($color-primary-black, .4);
+}
+	
+}
+.stat-count {
+	padding-top: 2rem;
+	background-color: rgba($color-primary-black, .6);
+	height: 15rem;
+	width: 100%;
+	text-align: center;
+	
+	& .col {
+		text-align: center;
+		
+		& h3{
+			font-size: 4rem;
+		}
+	}
+	& hr{
+		background-color: $color-blue-light;
+		height: .2rem;
+		width: 50%;
+		margin-left: 25%;
+	}
+	
+	
+}
+
+
+
+

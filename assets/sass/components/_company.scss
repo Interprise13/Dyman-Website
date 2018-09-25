@@ -1,0 +1,14 @@
+
+.company{
+	& .company-header{
+	text-transform: uppercase;
+	font-family: 'Courier New', sans-serif;
+	font-size: 2rem;
+	}
+	& p{
+		font-size: 1.3rem;
+	}
+}
+
+
+
