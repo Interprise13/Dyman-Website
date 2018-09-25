@@ -59,7 +59,7 @@ body {
   position: relative;
   z-index: 2;
   background-color: #fff;
-  background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.7)), url(/Dyman-Website/images/header-background.jpg);
+  background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.7)), url(/images/header-background.jpg);
   background-position: center;
   background-size: contain;
   padding: 0 4rem 10rem 4rem; }
@@ -141,7 +141,7 @@ header {
     height: 100%;
     width: 100%;
     background-color: #fff;
-    background-image: linear-gradient(to right bottom, rgba(17, 101, 229, 0.2), rgba(17, 101, 229, 0)), url(/Dyman-Website/images/warehouseImage.jpg);
+    background-image: linear-gradient(to right bottom, rgba(17, 101, 229, 0.2), rgba(17, 101, 229, 0)), url(/images/warehouseImage.jpg);
     background-position: center center;
     background-size: cover;
     position: fixed;
@@ -237,7 +237,7 @@ header {
   padding-right: 2rem;
   padding-top: 1.2rem;
   background-color: #3e3e3e;
-  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), white), url(/Dyman-Website/images/header-background.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), white), url(/images/header-background.jpg);
   background-position: center center;
   border-bottom-style: solid;
   border-bottom-color: rgba(255, 255, 255, 0.6);
