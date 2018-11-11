@@ -12,5 +12,7 @@
     "@fortawesome/fontawesome-free": "^5.3.1",
     "node-sass": "^4.9.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "progressbar.js": "^1.0.1"
+  }
 }

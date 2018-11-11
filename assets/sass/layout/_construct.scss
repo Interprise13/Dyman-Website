@@ -1,0 +1,85 @@
+.construct-area{
+    background-color: rgba($color-primary-normal-grey, .2);
+    transform:skewY(3deg);
+    margin-top: -5rem;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+}
+.construct-area .container-fluid{
+    transform: skewY(-3deg);
+}
+.construct-area .row{
+}
+.construct-area .col-7{
+}
+.construct-area .col-5{
+}
+.pad-l-side{
+    padding-left: 4rem;
+}
+.pad-r-side{
+    padding-right: 4rem;
+}
+.border-r-side{
+    border: 2px solid $baseColor;
+    border-right: transparent;
+}
+.border-l-side{
+    border: 2px solid $baseColor;
+    border-left: transparent;
+}
+.construct-p{
+    height: 30rem;
+    margin-top: 5rem;
+    text-align: center;
+    & h2{
+        color:$color-primary-white;
+        font-size: 2rem;
+        font-family: $pop;
+        text-transform: uppercase;
+        font-weight: 800;
+        padding: 18px 0px 12px 0px;
+    }
+    & p{
+        color: $color-primary-dark-grey;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        line-height: 3rem;
+        font-size: 1.5rem;
+    }
+}
+.img-fit{
+    display: block;
+}
+.round-img{
+    height: 40rem;
+    width: 100%;
+    box-shadow: .5rem .5rem 6rem   rgba(0,0,0,0.6);
+	-moz-box-shadow: .5rem .5rem 6rem   rgba(0,0,0,0.6);
+	-webkit-box-shadow: .5rem .5rem 6rem   rgba(0,0,0,0.6);
+	-o-box-shadow: .5rem .5rem 6rem   rgba(0,0,0,0.6);
+    
+    
+    
+}
+ .construct-area hr{
+    background-color: rgba($baseColor,.7);
+    color: rgba($color-primary-normal-grey,.7);
+    position:relative;
+    width:18rem;
+    height:.3rem;
+    text-align: center;
+    border:2px;
+    margin-top: 5rem; 
+    margin-left: auto;
+    margin-right: auto;
+
+    
+    }
+.inbetween {
+    margin-top: 0 !important;
+    height: .1rem !important;
+}
+
+
+

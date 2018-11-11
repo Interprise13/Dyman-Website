@@ -1,0 +1,107 @@
+.section-stories{
+    padding-top: 3rem;
+}
+.heading-secondary{
+    color: $color-primary-dark-grey;
+    font-weight: 700;
+    font-size: 40px;
+    text-shadow: 1px 1px $color-primary-light-grey;
+}
+
+.story {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    box-shadow: 0 3rem 6rem rgba($baseColor, .1);
+    background-color: rgba($color-primary-white, .6);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: 1rem;
+    transform: skewX(-12deg);
+    
+    
+    & h3{
+        color: $baseColor;
+    }
+  
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        transform: translateX(-3rem) skewX(12deg);
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        transform: translateX(-4rem) scale(1.4);
+        backface-visibility: hidden;
+        transition: all .5s;
+    }
+
+    &__text {
+        transform: skewX(12deg);
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-primary-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+}
+.story-btn{
+    @extend .p1-gradient-bg;
+    color: $color-primary-white;
+    text-transform:uppercase;
+    border-radius:1rem;
+    font-size:1.1rem;
+    padding:.5rem 3rem .5rem 3rem;
+    font-weight:400;	
+    border:1px solid transparent;
+    @include transition();
+    &:hover{	
+        cursor:pointer;
+        background:transparent;
+        border-color: $color-primary-white;
+        color: $baseColor;
+    }	
+}
+.u-margin-bottom-big{
+    margin-bottom: 5rem;
+}
+.u-margin-bottom-small{
+    margin-bottom: 2rem;
+}
+.u-center-text{
+    text-align: center;
+    
+}
