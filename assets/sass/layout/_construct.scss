@@ -1,11 +1,11 @@
 .construct-area{
-    background-color: rgba($color-primary-normal-grey, .2);
+    background-color: rgba($offwhite, 1);
     transform:skewY(3deg);
     margin-top: -5rem;
     padding-top: 10rem;
     padding-bottom: 5rem;
 }
-.construct-area .container-fluid{
+.construct-area .container{
     transform: skewY(-3deg);
 }
 .construct-area .row{
@@ -23,36 +23,38 @@
 .border-r-side{
     border: 2px solid $baseColor;
     border-right: transparent;
+    border-bottom: transparent;
 }
 .border-l-side{
     border: 2px solid $baseColor;
     border-left: transparent;
+    border-bottom: transparent;
 }
 .construct-p{
     height: 30rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
     text-align: center;
-    & h2{
-        color:$color-primary-white;
+    & h3{
+        color:$color-primary-dark-grey;
         font-size: 2rem;
         font-family: $pop;
-        text-transform: uppercase;
-        font-weight: 800;
+        text-transform: capitalize;
+        font-weight: 500;
         padding: 18px 0px 12px 0px;
     }
     & p{
         color: $color-primary-dark-grey;
         padding-left: 2rem;
         padding-right: 2rem;
-        line-height: 3rem;
-        font-size: 1.5rem;
+        line-height: 2rem;
+        font-size: 1rem;
     }
 }
 .img-fit{
     display: block;
 }
 .round-img{
-    height: 40rem;
+    height: 30rem;
     width: 100%;
     box-shadow: .5rem .5rem 6rem   rgba(0,0,0,0.6);
 	-moz-box-shadow: .5rem .5rem 6rem   rgba(0,0,0,0.6);
@@ -79,6 +81,23 @@
 .inbetween {
     margin-top: 0 !important;
     height: .1rem !important;
+}
+.construct-btn{
+    background-color: $baseColor;
+    color: $color-primary-white;
+    text-transform:uppercase;
+    border-radius:1rem;
+    font-size:1.1rem;
+    padding:.5rem 3rem .5rem 3rem;
+    font-weight:400;	
+    border:1px solid transparent;
+    @include transition();
+    &:hover{	
+        cursor:pointer;
+        background:transparent;
+        border-color: $color-primary-white;
+        color: $baseColor;
+    }	
 }
 
 
