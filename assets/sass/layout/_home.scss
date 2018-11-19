@@ -269,6 +269,7 @@ body .inner{
     opacity: 0;
     padding: 0px 35px 0px 40px;
     position: relative;
+    @include transition;
     &:before{
         content: "";
         background: #e5e5e5;
@@ -281,6 +282,12 @@ body .inner{
     a{
         text-decoration: none;
     }
+    & h1{
+        color: $color-primary-normal-grey;
+        font-size: 7rem;
+        position: absolute;
+        opacity: .2;
+    }
     h4{
         font-size: 20px;
         color: $dip;
@@ -288,11 +295,8 @@ body .inner{
         font-weight: 500;
         line-height: 36px;
         padding-bottom: 10px;
-        @include transition;
-        i{
-            padding-right: 10px;
-            color: $baseColor;
-        }
+        padding-top: 1.2rem;
+        
         &:hover{
             color: $baseColor;
         }
@@ -302,6 +306,20 @@ body .inner{
         line-height: 26px;
         color: $pfont;
         font-family: $pop;
+    }
+    
+    & :hover {
+        color: $baseColor;
+    }
+}
+.step-wrapper{
+    text-align: center;
+    
+    & h2{
+        color: $baseColor;
+    }
+    & p{
+        font-size: 1.2rem;
     }
 }
 .digital_feature{
@@ -513,7 +531,7 @@ body .inner{
 }
 
 .price-area{
-    height: 100rem;
+    min-height: 100rem;
 	background:$offwhite;
     
 	.single-price{

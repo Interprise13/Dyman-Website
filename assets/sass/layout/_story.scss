@@ -1,19 +1,23 @@
 .section-stories{
-    padding-top: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    margin-top: -3rem;
+    background-color: rgba($baseColor, .2);
+    
 }
 .heading-secondary{
     color: $color-primary-dark-grey;
     font-weight: 700;
     font-size: 40px;
-    text-shadow: 1px 1px $color-primary-light-grey;
+    text-shadow: 1px 1px $color-primary-dark-grey;
 }
 
 .story {
     width: 75%;
     margin: 0 auto;
     margin-bottom: 2rem;
-    box-shadow: 0 3rem 6rem rgba($baseColor, .1);
-    background-color: rgba($color-primary-white, .6);
+    box-shadow: 0 3rem 6rem rgba($color-primary-white, .4);
+    background-color: rgba($color-primary-white, 1);
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;

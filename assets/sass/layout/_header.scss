@@ -83,7 +83,7 @@
 }
 #nav-slide .nav-menu li:hover > a, .nav-menu > .menu-active > a {
 	transition: .3s;
-  color: $primary-color;
+    color: $baseColor;
 }
 #nav-slide .col-4{
     height: 3rem;
@@ -96,6 +96,11 @@
     padding-top: .5rem;
     
     
+}
+#nav-slide .nav-menu li {
+    border-top: none;
+  	position: relative;
+  	white-space: nowrap;
 }
 
 /*--------------------------------------------------------------
@@ -133,10 +138,11 @@
 }
 .main-logo{
 	width: 100%;
+    border-radius: 30%;
 }
 .img-align{
     display: block;
-    margin: auto;
+    position: relative;
 }
 
 
@@ -162,7 +168,7 @@
         }
     }
     .tel:hover{
-          color:$color-blue-light;
+          color:$baseColor;
     }
   .menu-top-middle{
       @media(max-width:414px){
@@ -176,6 +182,8 @@
         color:$color-primary-black;
         font-size: .8rem;
         font-weight:500;
+        transition: .5s color;
+        text-decoration: none;
         @media(max-width:960px){
             display:none;
             span{
@@ -184,17 +192,16 @@
         }
     }
       .tel:hover{
-          color:$color-blue-light;
+          color:$baseColor;
       }
     span{
       @extend .p1-gradient-bg;
       color: #fff;
       padding: 28px;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       margin-right: 10px;
       @media(max-width:480px){
-        background-color: #f6214b;
         color: #fff;
         padding: 12px;
         font-size: 18px;
@@ -212,8 +219,10 @@
   .menu-top-right{
     text-align:right;
     .tel{
-      color:$color-primary-black;
-      font-weight:500;
+        color:$color-primary-black;
+        font-weight:500;
+        text-decoration: none;
+        transition: .5s color;
       @media(max-width:960px){
         display:none;
         span{
@@ -221,11 +230,14 @@
         }
       }
     }
+      .tel:hover{
+          color:$baseColor;
+      }
     span{
       @extend .p1-gradient-bg;
       color: #fff;
       padding: 28px;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       margin-left: 10px;
       @media(max-width:480px){
@@ -287,22 +299,25 @@
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Nav Menu Essentials */
-
+.nav-info{
+    text-align: center;
+    padding-bottom: 2rem;
+}
 .nav-menu, .nav-menu * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .nav-menu ul {
-  position: absolute;
-  display: none;
-  top: 100%;
-  left: 0;
-  z-index: 99;
+    position: absolute;
+    display: none;
+    top: 100%;
+    z-index: 99;
 }
 
 .nav-menu li {
+    border-top: 1px solid black;
   	position: relative;
   	white-space: nowrap;
 }
@@ -345,7 +360,7 @@
 
 /* Nav Meu Container */
 #nav-menu-container {
-  margin: 0;
+  margin: auto;
 }
 
 @media (min-width: 1024px) {
@@ -374,7 +389,7 @@
 
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {
 	transition: .3s;
-  color: $primary-color;
+    color: $baseColor;
 }
 
 .nav-menu > li {
