@@ -288,6 +288,119 @@ $('#twenty').on(
 });
 
 
+// array of prices
+
+let foamPrices = [
+    {
+        desc: "15-60",
+        price: 0.05
+    },
+    {
+        desc: "15-100",
+        price: 0.10
+    },
+    {
+        desc: "19-130",
+        price: 0.15
+    },
+    {
+        desc: "20-100",
+        price: 0.20
+    },
+    {
+        desc: "23-130",
+        price: 0.25
+    },
+    {
+        desc: "24-160",
+        price: 0.30
+    },
+    {
+        desc: "25-50",
+        price: 0.35
+    },
+    {
+        desc: "27-200",
+        price: 0.40
+    },
+    {
+        desc: "28-80",
+        price: 0.45
+    },
+    {
+        desc: "29-400",
+        price: 0.50
+    },
+    {
+        desc: "30-100",
+        price: 0.55
+    },
+    {
+        desc: "30-130",
+        price: 0.60
+    },
+    {
+        desc: "31-320",
+        price: 0.65
+    },
+    {
+        desc: "35-110",
+        price: 0.70
+    },
+    {
+        desc: "35-130",
+        price: 0.75
+    },
+    {
+        desc: "35-160",
+        price: 0.80
+    },
+    {
+        desc: "35-200",
+        price: 0.85
+    },
+    {
+        desc: "35-230",
+        price: 0.90
+    },
+    {
+        desc: "35-600",
+        price: 0.95
+    },
+    {
+        desc: "36-90",
+        price: 1.00
+    }
+];
+
+// get the id of the clicked price p/m button
+let isActivePriceBtn = "";
+let isFoamGrade = "";
+let activeHeaderModal = document.querySelector(".modal-wrap h3");
+let foamGradePrice = "";
+
+
+$(".price-btn").click(function(){
+    
+    isActivePriceBtn = $(this).closest('div').closest('section').attr('id');
+    //console.log(isActivePriceBtn);
+    isFoamGrade = $(this).closest('div').siblings('div').children('h4').attr('data-info');
+    //console.log(isFoamGrade);
+    $(".modal-wrap h3").html(isFoamGrade);
+    
+    for(var i = 0; i < foamPrices.length; i++) {
+        if (foamPrices[i].desc == isFoamGrade) {
+            foamGradePrice = foamPrices[i].price;
+            //console.log(foamGradePrice)
+            return foamGradePrice;
+    }
+}
+});
+
+
+
+
+
 // function for the validation of the pricing form
 
 (function() {
@@ -308,9 +421,47 @@ $('#twenty').on(
   }, false);
 })();
 
+//Clear validation on close 
 
 
 
+
+// calculate the price
+
+let calculatePrice = function(){
+    let foamGrade = foamGradePrice;
+    
+    
+    
+    let invalid = 10;
+    let totalPrice = "";
+    
+    let height = document.querySelector('#validationCustom01').value;
+    //console.log(height);
+    height = parseInt(height);
+    let length = document.querySelector('#validationCustom02').value;
+    length = parseInt(length);
+    //console.log(length);
+    let width = document.querySelector('#validationCustom03').value;
+    width = parseInt(width);
+    //console.log(width);
+    if(height != null && length != null && width != null){
+        if(height < invalid || length < invalid || width < invalid){
+            alert("you suck");
+        } else {
+        totalPrice = (height/5 * foamGrade) + (length/5 * foamGrade) + (width/5 *foamGrade) ;
+        $('#input-calculate').val(totalPrice);
+        }
+    }
+    
+    
+}
+
+$("#calButton").click(function(){
+    calculatePrice();
+    event.preventDefault();
+    
+});
 
 
 //Scroll Function to display: none the header on 200+ scroll.
@@ -343,7 +494,9 @@ function throttleScroll(e) {
     
 }
 
-document.addEventListener("DOMContentLoaded", scrolling, false);
+
+
+window.addEventListener("DOMContentLoaded", scrolling, false);
 
 let mainContentArea = document.querySelector(".main-content-area");
 let mainContentBox1 = document.querySelector("#c-box-1");
@@ -376,9 +529,10 @@ function scrolling(e) {
         storyBox.classList.add("animate-up");
         storyBox.classList.add("animate-delay-11s");
     }
-}
-
-
+    if(isPartiallyVisible(mainContentArea)) {
+        mainContentArea.classList.add("animate-up");
+        }
+}   
 
 
 

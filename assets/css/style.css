@@ -8,6 +8,9 @@
 .dropdown-item.active, .dropdown-item:active {
   background-color: #3cc390; }
 
+.smallText {
+  font-size: .7rem; }
+
 .company .company-header {
   text-transform: uppercase;
   font-family: 'Courier New', sans-serif;
@@ -174,6 +177,9 @@ body .inner {
 
 .section-gap-half {
   padding: 3rem 0; }
+
+.section-gap-small-bot {
+  margin-bottom: 1rem; }
 
 .section-title {
   padding-bottom: 30px; }
@@ -682,12 +688,12 @@ b {
   width: 200px;
   height: 200px;
   display: block;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 0 30px rgba(143, 143, 131, 0.6);
   font-size: 20px;
   text-align: center;
   line-height: 200px;
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
   font-family: sans-serif;
   text-transform: uppercase;
   transition: all 1s linear; }
@@ -713,6 +719,40 @@ b.bottom {
 
 b.front {
   transform: translateZ(100px); }
+
+.modal-wrap {
+  background-color: rgba(249, 249, 255, 0.9); }
+
+.modal hr {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+.modal h2 {
+  text-align: center;
+  font-weight: 600;
+  padding-top: 1rem;
+  color: #8f8f83; }
+
+.modal p {
+  font-size: 1rem;
+  text-align: center;
+  padding: 0 1rem 0 1rem; }
+
+.modal h3 {
+  color: #2bc0a4;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center; }
+
+.modal .col-6 p {
+  padding-top: 3rem;
+  text-align: center; }
+
+.modal .input-lg {
+  margin-top: 5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem; }
 
 .booking-area {
   background: url(../img/booking-bg.jpg) center;
@@ -2010,3 +2050,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* End Footer Area css
 ============================================================================================ */
+.gallery-text {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  .gallery-text h2 {
+    font-size: 3rem; }
+
+.perfect-section-picture {
+  text-align: center; }
+  .perfect-section-picture .img-fit-gallery {
+    width: 30rem;
+    height: 30rem;
+    padding: .5rem;
+    margin: auto; }

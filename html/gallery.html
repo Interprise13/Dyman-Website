@@ -19,45 +19,71 @@
 		
 	</head>
 	<body>
+		<div class="overlay"></div>
+        <div class="inner">
+            <div id="nav-slide" class="container-fluid">
+                <div class="row">
+                <div class="col-3">
+                    <a href="#"><img class="logo-word" src="/images/dyman-logo-word.png"></a>
+                </div>
+                <div class="col-8">
+                <div class="nav-scroll-slide">
+                    <div class="align-items-center justify-content-center d-flex">
+                        <ul class="nav-menu">
+				            <li class="menu-active"><a href="index.html">Home</a></li>
+				            <li><a href="about.html">About</a></li>
+				            <li><a href="service.html">Service</a></li>
+				            <li><a href="pricing.html">Pricing</a></li>
+				            <li><a href="gallery.html">Gallery</a></li>
+				            <li><a href="contact.html">Contact</a></li>
+				        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
 		<header id="header" id="home">
+            <section id="homeScroll">
 			    <div class="container">
 			    	<div class="row header-top align-items-center">
-			    		<div class="col-lg-4 col-sm-4 menu-top-left">
-			    			<a href="Dyman@DyamnFoams.com"><span class="lnr"><i class="far fa-address-book"></i></span></a>
+			    		<div class="col-lg-3 col-sm-3 menu-top-left">
+			    			<a href="contact.html"><span class="lnr"><i class="far fa-address-book"></i></span></a>
 			    			<a class="tel" href="Dyman@DyamnFoams.com">Dyman@DymanFoams.com</a>
 			    		</div>
-			    		<div class="col-lg-4 menu-top-middle justify-content-center d-flex">
-							<a href="index.html">
-								<img class="img-fluid" src="/images/dyman-logo-large.png" alt="">	
+			    		<div class="col-6 justify-content-center d-flex">
+							<a class="img-align" href="index.html">
+								<img class="main-logo" src="/images/dyman-logo-med-remas.png" alt="">	
 							</a>			    			
 			    		</div>
-			    		<div class="col-lg-4 col-sm-4 menu-top-right">
-			    			<a class="tel " href="tel:07 3865 1400">07 3865 1400</a>
+			    		<div class="col-lg-3 col-sm-3 menu-top-right">
+			    			<a class="tel" href="tel:07 3865 1400">07 3865 1400</a>
 			    			<a href="tel:07 3865 1400"><span class="lnr"><i class="fas fa-phone"></i></span></a>
 			    		</div>
 			    	</div>
 			    </div>	
-			    	<hr>
+
+            </section>
+            <section id="nav-section">
 			    <div class="container">	
-			    	<div class="row align-items-center justify-content-center d-flex">
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="index.html">Home</a></li>
-				          <li><a href="about.html">About</a></li>
-				          <li><a href="service.html">Service</a></li>				          
-				          <li><a href="pricing.html">Pricing</a></li>
-				          <li><a href="gallery.html">Gallery</a>
-				          </li>
-				          <li><a href="contact.html">Contact</a></li>
-				        </ul>
-				      </nav><!-- #nav-menu-container -->		    		
+			    	<div class="row justify-content-center d-flex">
+                          <nav id="nav-menu-container">
+                            <ul class="nav-menu">
+                              <li id="indexNav"><a href="index.html">Home</a></li>
+                              <li id="aboutNav"><a href="about.html">About</a></li>
+                              <li id="serviceNav"><a href="service.html">Service</a></li>         
+                              <li id="pricingNav"><a href="pricing.html">Pricing</a></li>
+                              <li id="galleryNav" class="menu-active"><a href="gallery.html">Gallery</a>
+                              </li>
+                              <li id="contactNav"><a href="contact.html">Contact</a></li>
+                            </ul>
+                          </nav>		    		
 			    	</div>
 			    </div>
-			  </header>
+            </section>
+            </header>
 		
 		<!-- Start banner area -->
 		<section class="banner-area relative" id="home">	
-				<div class="overlay overlay-bg"></div>
 				<div class="container">				
 					<div class="banner-height row fullscreen d-flex align-items-center justify-content-start">
 						<div class="banner-content col-lg-12">
@@ -71,6 +97,33 @@
 					</div>
 				</div>
 			</section>
+            <main id="main-bg-light">
+                <section class="picture-col">
+                <div class="container">
+                    <div class="row">
+                        <div class="gallery-text">
+                            <h2>Hello</h2>
+                            <hr>
+                            <p> How are you</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="perfect-section-picture">
+                                <img class="img-fit-gallery" src="/images/car-process-2.jpg">
+                                <img class="img-fit-gallery" src="/images/car-process-3.jpg">
+                                <img class="img-fit-gallery" src="/images/gallery-image-1.gif">
+                                <img class="img-fit-gallery" src="/images/gallery-image-2.gif">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+                
+            </main>
+
+        </div>
+        
 			
 	</body>
 </html>

@@ -1,0 +1,23 @@
+
+.gallery-text{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    & h2{
+        font-size: 3rem;
+    }
+}
+
+
+.perfect-section-picture {
+    text-align: center;
+    
+    & .img-fit-gallery{
+        
+        width:30rem;
+        height: 30rem;
+        padding: .5rem;
+        margin: auto;
+        
+    }
+}
