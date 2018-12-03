@@ -447,7 +447,7 @@ let calculatePrice = function(){
     //console.log(width);
     if(height != null && length != null && width != null){
         if(height < invalid || length < invalid || width < invalid){
-            alert("you suck");
+            alert("Minimum size of height/length/width is 10mm");
         } else {
         totalPrice = (height/5 * foamGrade) + (length/5 * foamGrade) + (width/5 *foamGrade) ;
         $('#input-calculate').val(totalPrice);
@@ -463,12 +463,15 @@ $("#calButton").click(function(){
     
 });
 
+// remove data from modal on close
+
 
 //Scroll Function to display: none the header on 200+ scroll.
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      console.log("nav-slide");
     document.getElementById("nav-slide").style.top = "0";
   } else {
     document.getElementById("nav-slide").style.top = "-5rem";
@@ -498,6 +501,7 @@ function throttleScroll(e) {
 
 window.addEventListener("DOMContentLoaded", scrolling, false);
 
+
 let mainContentArea = document.querySelector(".main-content-area");
 let mainContentBox1 = document.querySelector("#c-box-1");
 let mainContentBox2 = document.querySelector("#c-box-2");
@@ -510,6 +514,35 @@ let storyBox = document.querySelector(".story-box");
 let centerPlate = document.querySelector(".center-plate");
 
 function scrolling(e) {
+    if(document.body.id == "home-page"){
+        
+    
+        if(isFullyVisible(mainContentArea)) {
+            mainContentArea.classList.add("animate-up");
+
+        }
+        if(isPartiallyVisible(mainContentArea)) {
+            mainContentBox1.classList.add("animate-up");
+            mainContentBox1.classList.add("animate-delay-03s");
+            mainContentBox2.classList.add("animate-up");
+            mainContentBox2.classList.add("animate-delay-05s");
+            mainContentBox3.classList.add("animate-up");
+            mainContentBox3.classList.add("animate-delay-07s");
+        }
+        if(isPartiallyVisible(storyMain)){
+            storyMain.classList.add("animate-up");
+            storyTitle.classList.add("animate-up");
+            storyTitle.classList.add("animate-delay-05s");
+            storyBox.classList.add("animate-up");
+            storyBox.classList.add("animate-delay-11s");
+        }
+        if(isPartiallyVisible(mainContentArea)) {
+        mainContentArea.classList.add("animate-up");
+        }
+    }
+    else if(document.body.id == "pricing-visible"){
+        
+    
     if(isPartiallyVisible(mainContentArea)) {
         mainContentArea.classList.add("animate-up");
         
@@ -522,17 +555,8 @@ function scrolling(e) {
         mainContentBox3.classList.add("animate-up");
         mainContentBox3.classList.add("animate-delay-07s");
     }
-    if(isPartiallyVisible(storyMain)){
-        storyMain.classList.add("animate-up");
-        storyTitle.classList.add("animate-up");
-        storyTitle.classList.add("animate-delay-05s");
-        storyBox.classList.add("animate-up");
-        storyBox.classList.add("animate-delay-11s");
-    }
-    if(isPartiallyVisible(mainContentArea)) {
-        mainContentArea.classList.add("animate-up");
-        }
-}   
+}
+}
 
 
 
@@ -569,16 +593,16 @@ function isFullyVisible(el) {
 //Show function
 
 var showAll = function() {
-    $("p:contains('Soft')").parent('div').parent('div').show();
-    $("p:contains('Medium')").parent('div').parent('div').show();
-    $("p:contains('Firm')").parent('div').parent('div').show();
+    $("p:contains('Soft')").parent('div').parent('section').show();
+    $("p:contains('Medium')").parent('div').parent('section').show();
+    $("p:contains('Firm')").parent('div').parent('section').show();
 };
 
 $(document).ready(function(){
   $("#softChoice").click(function() {
       showAll();
-    $("p:contains('Medium')").parent('div').parent('div').hide();
-    $("p:contains('Firm')").parent('div').parent('div').hide();
+    $("p:contains('Medium')").parent('div').parent('section').hide();
+    $("p:contains('Firm')").parent('div').parent('section').hide();
     
   });
 });
@@ -586,8 +610,8 @@ $(document).ready(function(){
 $(document).ready(function(){
   $("#mediumChoice").click(function() {
       showAll();
-    $("p:contains('Soft')").parent('div').parent('div').hide();
-    $("p:contains('Firm')").parent('div').parent('div').hide();
+    $("p:contains('Soft')").parent('div').parent('section').hide();
+    $("p:contains('Firm')").parent('div').parent('section').hide();
     
   });
 });
@@ -595,8 +619,8 @@ $(document).ready(function(){
 $(document).ready(function(){
   $("#firmChoice").click(function() {
       showAll();
-    $("p:contains('Soft')").parent('div').parent('div').hide();
-    $("p:contains('Medium')").parent('div').parent('div').hide();
+    $("p:contains('Soft')").parent('div').parent('section').hide();
+    $("p:contains('Medium')").parent('div').parent('section').hide();
     
   });
 });
@@ -607,6 +631,9 @@ $(document).ready(function(){
     
   });
 });
+
+// GALLERY FUNCTIONS //
+
 
 
 

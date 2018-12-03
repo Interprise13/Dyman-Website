@@ -121,7 +121,9 @@ body .inner{
 	}
 }
 
-
+.hr-dark{
+    color: $color-primary-black;
+}
 .overlay {
     position: absolute;
     left: 0;
@@ -145,11 +147,11 @@ body .inner{
         transition-timing-function: ease-out;
 	}
 	.banner-height {
-		height: 100vh;
+		height: 75vh;
 	}
 }
 .banner-content {
-    top: -10rem;
+    top: -5rem;
 	z-index:2;
 	text-align:center;
 	h1{
@@ -254,7 +256,7 @@ body .inner{
     border-radius: 2px;
     background: #fff;
     padding: 45px 0px;
-    margin-top: -5rem;
+    margin-top: -1rem;
     top: -5rem;
     z-index: 22;
     position: relative;
