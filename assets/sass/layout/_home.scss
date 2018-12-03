@@ -365,6 +365,9 @@ body .inner{
 //------------ story area --------------//
 
 .story-title {
+     @media (min-width: 500) and (max-width: 992px) {
+    text-align: center;
+  } 
 	
 }
 .story-area {
