@@ -1,5 +1,8 @@
+
+
+//------------------------INDEX SERVICE SNIPPET-----------------------//
 .service_area{
-    background: url(/images/warehouseImage.jpg) no-repeat fixed center center;
+    background: url(../../images/warehouseImage.jpg) no-repeat fixed center center;
     background-size: cover;
     position: relative;
     z-index: 2;
@@ -64,3 +67,172 @@
     
     
 }
+//----------------------INDEX SERVICE SNIPPET END-----------------------//
+
+
+
+
+//------------------------SERVICE HTML START -------------------------//
+
+
+.padding-T{
+    padding-top: 1rem;
+}
+
+
+
+.service-main{
+    background-color: $offwhite;
+    padding-top: 3rem;
+    
+    & .service-1,.service-2{
+        padding-bottom: 3rem;
+        
+        & h3{
+            font-weight: 100;
+            text-align: center;
+            margin: auto;
+        }
+    }
+    & h2{
+        text-align: center;
+        margin: auto;
+    }
+}
+.service-2{
+    padding-bottom: 0 !important;
+    & .pathfinder-back{
+        background-color: #666666;
+        background-image: url(../../images/L-Series-Wireframe.jpg);
+        background-size: contain;
+        background-repeat:no-repeat;
+        min-height: 350px;
+        
+        
+        & h2{
+        padding-top: 4rem;
+        color: $color-primary-white;
+        font-weight: 600;
+        font-family: $pop;
+        font-size: 3rem;
+    }
+    & h5{
+        padding-top: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-primary-white;
+        font-weight:600;
+        font-family: $pop;
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+        
+    }
+    
+        
+    }
+}
+.wintech-header{
+    & h2{
+        color: $color-primary-dark-grey;
+        font-family: $pop;
+        font-weight: 500;
+        text-align: center;
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+    & h3{
+        text-align: center;
+        font-size: 1.5rem;
+        font-style:italic;
+        padding-bottom: 1rem;
+    }
+    & hr{
+        margin: auto;
+        width: 40% !important;
+    }
+        
+    }
+.wintech-bio{
+    padding-left: 4rem;
+    
+    & i{
+        margin-right: 3rem !important;
+        color: $color-primary-normal-grey;
+        &:hover{
+            color: $baseColor;
+        }
+    }
+    & h2{
+        text-align: left;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    & p{
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+    & hr{
+        height: 2px !important;
+        background-color: rgba($baseColor, .4) !important;
+        margin: auto;
+        width: 100% !important;
+        
+    }
+}
+.wintech-back{
+    background-color: #2660ac;
+    min-height: 350px;
+    
+    & h2{
+        padding-top: 4rem;
+        color: $color-primary-white;
+        font-weight: 600;
+        font-family: $pop;
+        font-size: 3rem;
+    }
+    & h5{
+        padding-top: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-primary-white;
+        font-weight:600;
+        font-family: $pop;
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+        
+    }
+}
+.win-wrapper{
+    display: block;
+    margin: auto;
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+.wintech-img{
+    position: relative;
+    margin: auto;
+    display: block;
+    
+}
+.pathfinder-img{
+    position: relative;
+    margin: auto;
+    display: block;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------SERVICE HTML END -----------------------------//
+

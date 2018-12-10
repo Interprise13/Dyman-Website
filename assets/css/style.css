@@ -142,7 +142,7 @@ body {
     margin-left: 25%; }
 
 html, body {
-  background: rgba(0, 0, 0, 0.7) url(/images/pathfinder.jpg) fixed;
+  background: rgba(0, 0, 0, 0.7) url(../../images/pathfinder.jpg) fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -189,7 +189,7 @@ body .inner {
     font-size: 16px;
     margin-bottom: 0; }
 
-.p1-gradient-bg, .banner-content .genric-btn, .story-area .primary-btn, .booking-right .btn-lg, .single-gallery .thumb div, .header-top .menu-top-left span, .header-top .menu-top-right span, .story-btn {
+.p1-gradient-bg, .banner-content .genric-btn, .story-area .primary-btn, .header-top .menu-top-left span, .header-top .menu-top-right span, .story-btn {
   background-image: -moz-linear-gradient(0deg, #41f7d9 0%, #536ade 100%);
   background-image: -webkit-linear-gradient(0deg, #41f7d9 0%, #536ade 100%);
   background-image: -ms-linear-gradient(0deg, #41f7d9 0%, #536ade 100%); }
@@ -453,7 +453,7 @@ body .inner {
     right: 0;
     width: 50%;
     height: 100%;
-    background: url(/images/waving.jpg) no-repeat center center/cover;
+    background: url(../../images/waving.jpg) no-repeat center center/cover;
     z-index: 1; }
   .story-area p {
     font-size: 1rem; }
@@ -761,162 +761,6 @@ b.front {
   padding-bottom: 1rem;
   padding-top: 1rem; }
 
-.booking-area {
-  background: url(../img/booking-bg.jpg) center;
-  background-size: cover; }
-  .booking-area .overlay-bg {
-    background-color: rgba(0, 0, 0, 0.8); }
-
-.booking-left h4 {
-  font-weight: 300;
-  color: #fff;
-  padding: 20px 0; }
-
-.booking-left p {
-  margin-bottom: 20px; }
-
-.booking-left .star {
-  margin-left: 30px; }
-  .booking-left .star .checked {
-    color: orange; }
-
-.booking-left .owl-carousel .owl-item img {
-  width: auto !important; }
-
-.booking-left .owl-dots {
-  text-align: left;
-  bottom: 5px;
-  margin-top: 20px;
-  width: 100%;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden; }
-
-.booking-left .owl-dot {
-  height: 10px;
-  width: 10px;
-  display: inline-block;
-  background: rgba(127, 127, 127, 0.5);
-  margin-left: 5px;
-  margin-right: 5px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s; }
-
-.booking-left .owl-dot.active {
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  background: #536ADE; }
-
-.booking-right {
-  background-color: transparent;
-  padding: 30px;
-  border: 1px solid #979196; }
-  .booking-right h4 {
-    color: #fff; }
-  .booking-right .form-control {
-    padding: 0.535rem 0.75rem !important;
-    font-size: 14px;
-    background-color: #f9f9ff;
-    margin-bottom: 20px; }
-    .booking-right .form-control:last-child {
-      margin-bottom: 0px; }
-  .booking-right .nice-select {
-    width: 100%;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    margin-bottom: 20px; }
-  .booking-right .btn {
-    background-color: #536ADE;
-    color: #fff;
-    font-size: 14px;
-    text-transform: capitalize; }
-  @media (max-width: 767px) {
-    .booking-right {
-      margin-top: 50px !important;
-      padding: 20px;
-      margin: 20px; } }
-  .booking-right .dates-wrap .input-group-text {
-    height: 40px;
-    background: #fff;
-    border: none;
-    border-top-right-radius: .25rem !important;
-    border-bottom-right-radius: .25rem !important; }
-
-.latest-blog-area .single-blog img {
-  border-radius: 5px; }
-
-.latest-blog-area .single-blog .tags {
-  margin: 20px 0; }
-  .latest-blog-area .single-blog .tags li {
-    display: inline-block;
-    background: #536ADE;
-    border: 1px solid transparent; }
-    .latest-blog-area .single-blog .tags li a {
-      color: #fff;
-      padding: 10px; }
-    .latest-blog-area .single-blog .tags li:hover {
-      background-color: #fff;
-      border: 1px solid #eee; }
-      .latest-blog-area .single-blog .tags li:hover a {
-        color: #000000; }
-
-.latest-blog-area .single-blog h4 {
-  padding-bottom: 20px; }
-
-.latest-blog-area .single-blog .post-date {
-  color: #000000; }
-
-.single-gallery .thumb {
-  position: relative; }
-
-.single-gallery .thumb div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.5s; }
-  .single-gallery .thumb div i {
-    color: #fff;
-    font-size: 20px;
-    padding: 10px;
-    z-index: 9999; }
-
-.single-gallery .thumb img {
-  display: block;
-  width: 100%; }
-
-.single-gallery .thumb div span {
-  display: block;
-  position: absolute;
-  bottom: 30px;
-  left: 20px;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 3px; }
-
-.single-gallery .thumb div p {
-  display: block;
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
-  font-weight: 100; }
-  @media (max-width: 768px) {
-    .single-gallery .thumb div p {
-      bottom: -15px; } }
-
-.single-gallery .thumb:hover div {
-  opacity: .8;
-  cursor: pointer; }
-
 .footer-area {
   background-color: #fff; }
   .footer-area h4 {
@@ -1196,6 +1040,9 @@ b.front {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.not-done-yet {
+  color: red !important; }
+
 #header {
   position: relative;
   left: 0;
@@ -1660,7 +1507,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     opacity: 1; } }
 
 .service_area {
-  background: url(/images/warehouseImage.jpg) no-repeat fixed center center;
+  background: url(../../images/warehouseImage.jpg) no-repeat fixed center center;
   background-size: cover;
   position: relative;
   z-index: 2;
@@ -1713,6 +1560,119 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #3cc390;
   height: 3rem !important;
   width: 3rem !important; }
+
+.padding-T {
+  padding-top: 1rem; }
+
+.service-main {
+  background-color: #f9f9ff;
+  padding-top: 3rem; }
+  .service-main .service-1, .service-main .service-2 {
+    padding-bottom: 3rem; }
+    .service-main .service-1 h3, .service-main .service-2 h3 {
+      font-weight: 100;
+      text-align: center;
+      margin: auto; }
+  .service-main h2 {
+    text-align: center;
+    margin: auto; }
+
+.service-2 {
+  padding-bottom: 0 !important; }
+  .service-2 .pathfinder-back {
+    background-color: #666666;
+    background-image: url(../../images/L-Series-Wireframe.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 350px; }
+    .service-2 .pathfinder-back h2 {
+      padding-top: 4rem;
+      color: #fff;
+      font-weight: 600;
+      font-family: Poppins, sans-serif;
+      font-size: 3rem; }
+    .service-2 .pathfinder-back h5 {
+      padding-top: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 600;
+      font-family: Poppins, sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 4px; }
+
+.wintech-header h2 {
+  color: #3e3e3e;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 3px; }
+
+.wintech-header h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: italic;
+  padding-bottom: 1rem; }
+
+.wintech-header hr {
+  margin: auto;
+  width: 40% !important; }
+
+.wintech-bio {
+  padding-left: 4rem; }
+  .wintech-bio i {
+    margin-right: 3rem !important;
+    color: #8f8f83; }
+    .wintech-bio i:hover {
+      color: #2bc0a4; }
+  .wintech-bio h2 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 400; }
+  .wintech-bio p {
+    font-size: 1.2rem;
+    font-weight: 100; }
+  .wintech-bio hr {
+    height: 2px !important;
+    background-color: rgba(43, 192, 164, 0.4) !important;
+    margin: auto;
+    width: 100% !important; }
+
+.wintech-back {
+  background-color: #2660ac;
+  min-height: 350px; }
+  .wintech-back h2 {
+    padding-top: 4rem;
+    color: #fff;
+    font-weight: 600;
+    font-family: Poppins, sans-serif;
+    font-size: 3rem; }
+  .wintech-back h5 {
+    padding-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    font-family: Poppins, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 4px; }
+
+.win-wrapper {
+  display: block;
+  margin: auto;
+  padding-top: 1rem;
+  padding-left: 2rem; }
+
+.wintech-img {
+  position: relative;
+  margin: auto;
+  display: block; }
+
+.pathfinder-img {
+  position: relative;
+  margin: auto;
+  display: block; }
 
 .construct-area {
   background-color: #f9f9ff;
