@@ -61,6 +61,8 @@
     margin-right: 5rem;
     font-weight: 100;
     text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 .thumbnails a h4:hover {
     color: $baseColor;
@@ -76,7 +78,7 @@
 				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 $baseColor;
 			}
 .thumbnails a img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 		.thumbnails > div {

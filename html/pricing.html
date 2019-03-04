@@ -31,11 +31,11 @@
                     <div class="align-items-center justify-content-center d-flex">
                         <ul class="nav-menu">
 				            <li class="menu-active"><a href="../index.html">Home</a></li>
-				            <li><a href="about-us.html">About</a></li>
-				            <li><a href="service.html">Service</a></li>
-				            <li><a href="pricing.html">Pricing</a></li>
-				            <li><a href="gallery.html">Gallery</a></li>
-				            <li><a href="contact.html">Contact</a></li>
+				            <li><a href="./about-us.html">About</a></li>
+				            <li><a href="./services.html">Service</a></li>
+				            <li><a href="./pricing.html">Pricing</a></li>
+				            <li><a href="./gallery.html">Gallery</a></li>
+				            <li><a href="./contact.html">Contact</a></li>
 				        </ul>
                     </div>
                 </div>
@@ -79,13 +79,12 @@
 			    	<div class="row align-items-center justify-content-center d-flex">
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li id="indexNav"><a href="../index.html">Home</a></li>
-				          <li id="aboutNav"><a href="about-us.html">About</a></li>
-				          <li id="serviceNav"><a href="services.html">Service</a></li>         
-				          <li id="pricingNav" class="menu-active"><a href="pricing.html" >Pricing</a></li>
-				          <li id="galleryNav"><a href="gallery.html">Gallery</a>
-				          </li>
-				          <li id="contactNav"><a href="contact.html">Contact</a></li>
+				          <li><a href="../index.html">Home</a></li>
+                                <li><a href="./about-us.html">About</a></li>
+                                <li><a href="./services.html">Service</a></li>
+                                <li class="menu-active"><a href="pricing.html">Pricing</a></li>
+                                <li><a href="./gallery.html">Gallery</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
 			    	</div>
@@ -671,7 +670,7 @@
         <!-- Modal -->
         <!-- Large modal -->
 
-        <div id = "price-modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div id="price-modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <h2>Price Calculator</h2>
@@ -696,41 +695,25 @@
 
 
                                     <!-- input field -->
-                                    <form id="calculate" class="needs-validation" novalidate>
-                                        <div class="form-row">
+                                    <form id="calculate">
+                                          <div class="form-row">
                                             <div class="col-md-4 mb-3">
-                                                <label for="validationCustom01">Height</label>
-                                                <input type="text" class="form-control" id="validationCustom01" placeholder="Height" value="" autocomplete="off" required>
-                                                <div class="invalid-feedback smallText">
-                                                    Please provide a Height.
-                                                </div>
-                                                <div class="valid-feedback smallText">
-                                                Looks good!
-                                                </div>
+                                              <label for="validationDefault01">Height</label>
+                                              <input type="text" class="form-control" id="validationDefault01" placeholder="Height" value="" required>
                                             </div>
                                             <div class="col-md-4 mb-3">
-                                                <label for="validationCustom02">Length</label>
-                                                <input type="text" class="form-control" id="validationCustom02" placeholder="Length" value="" autocomplete="off" required>
-                                                <div class="invalid-feedback smallText">
-                                                    Please provide a Length.
-                                                </div>
-                                                <div class="valid-feedback smallText">
-                                                Looks good!
-                                                </div>
+                                              <label for="validationDefault02">Width</label>
+                                              <input type="text" class="form-control" id="validationDefault02" placeholder="Width" value="" required>
                                             </div>
                                             <div class="col-md-4 mb-3">
-                                                <label for="validationCustom02">Width</label>
-                                                <input type="text" class="form-control" id="validationCustom03" placeholder="Width" value="" autocomplete="off" required>
-                                                <div class="invalid-feedback smallText">
-                                                    Please provide a Width.
-                                                </div>
-                                                <div class="valid-feedback smallText">
-                                                Looks good!
-                                                </div>
+                                              <label for="validationDefault03">Length</label>
+                                              <input type="text" class="form-control" id="validationDefault03" placeholder="Length" value="" required>
                                             </div>
-                                      </div>
-                                      <button id="calButton" class="btn btn-primary section-gap-small-bot" type="submit">Calculate</button>
-                                    </form>                          
+                                          </div>
+                                        <div id="notValid" hidden>Please provide a measurement greater than 10mm</div>
+                                          <button id="calButton" class="btn btn-primary section-gap-small-bot" type="submit">Calculate</button>
+                                        
+                                        </form>
                                     <!-- input end -->
                                     </div>
                                 <div class="col-6">

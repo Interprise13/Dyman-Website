@@ -1,4 +1,9 @@
 
+
+
+
+
+
 $('#one').on(
     {
     hover: function(){
@@ -403,23 +408,6 @@ $(".price-btn").click(function(){
 
 // function for the validation of the pricing form
 
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
 
 //Clear validation on close 
 
@@ -436,19 +424,20 @@ let calculatePrice = function(){
     let invalid = 10;
     let totalPrice = "";
     
-    let height = document.querySelector('#validationCustom01').value;
+    let height = document.querySelector('#validationDefault01').value;
     //console.log(height);
     height = parseInt(height);
-    let length = document.querySelector('#validationCustom02').value;
+    let length = document.querySelector('#validationDefault02').value;
     length = parseInt(length);
     //console.log(length);
-    let width = document.querySelector('#validationCustom03').value;
+    let width = document.querySelector('#validationDefault03').value;
     width = parseInt(width);
     //console.log(width);
     if(height != null && length != null && width != null){
         if(height < invalid || length < invalid || width < invalid){
-            alert("Minimum size of height/length/width is 10mm");
+             document.getElementById("notValid").hidden=false;
         } else {
+            document.getElementById("notValid").hidden=true;
         totalPrice = (height/5 * foamGrade) + (length/5 * foamGrade) + (width/5 *foamGrade) ;
         $('#input-calculate').val(totalPrice);
         }
@@ -461,6 +450,10 @@ $("#calButton").click(function(){
     calculatePrice();
     event.preventDefault();
     
+});
+
+$('#price-modal').on('hidden.bs.modal', function(e) {
+  $(this).find('#calculate')[0].reset();
 });
 
 // remove data from modal on close

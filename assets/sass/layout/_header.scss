@@ -93,7 +93,7 @@
 }
 #nav-slide .logo-word{
     display: block;
-    height: 90%;
+    height: 80%;
     margin: auto;
     padding-left: 7rem;
     padding-top: .5rem;
@@ -101,8 +101,12 @@
     padding-left: 1rem;
   } 
      @media (min-width: 760px) and (max-width: 992px) {
+         height: 60%;
     padding-left: 0rem;
   }
+    @media(max-width: 760px){
+        height: 50%;
+    }
     
     
 }
@@ -116,12 +120,7 @@
 # Header
 --------------------------------------------------------------*/
 
-.not-done-yet{
-    color: red !important;
-    
-}
-
-#header {
+#mainHeader {
     position: relative;
     left: 0;
     top: 0;
@@ -134,6 +133,19 @@
     animation-delay: 1s;
     animation-fill-mode: backwards;
     transition-timing-function: ease-in;
+    @media(max-width:960px){
+        height: 76px;
+  }
+}
+
+#header {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 997;
+    background-color: rgba($color-primary-white, 1);
     
     @media(max-width:960px){
         height: 76px;
@@ -307,7 +319,7 @@
     margin-left: auto;
 }
 
-#header h5{
+#header h5, #mainHeader h5{
     font-family:$pop;
     font-size: 1rem;
     color: $color-primary-dark-grey;
@@ -343,6 +355,29 @@
     }
 }
 #header .header-socials{
+    margin-bottom: 0;
+    float: right;
+    padding-right: 2rem;
+        li{
+            display: inline-block;
+            margin-right: 32px;
+            
+            a{
+                font-size: 2rem;
+                color: #b5aec4;
+                @include transition;
+            }
+            &:hover{
+                a{
+                    color: #2bc0a4;
+                }
+            }
+            &:last-child{
+                margin-right: 0px;
+            }
+        }
+    }
+#mainHeader .header-socials{
     margin-bottom: 0;
     float: right;
     padding-right: 2rem;
@@ -677,11 +712,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @keyframes animateNav{
     0%{
-        left:-10rem;
         opacity: 0;
     }
     100%{ 
-        left: 0;
         opacity: 1;
     } 
 }
