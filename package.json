@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.13.1"
   },
   "dependencies": {
     "progressbar.js": "^1.0.1"
